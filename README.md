@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Agendamentos Descomplicados com o Google Calendar
 
-## Getting Started
+Este é um projeto que visa facilitar agendamentos usando o Google Calendar. Com uma interface amigável e intuitiva, permite que os usuários marquem compromissos de forma rápida e eficiente.
 
-First, run the development server:
+## Configuração
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Antes de iniciar o projeto, é necessário configurar o ambiente. Siga as etapas abaixo:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Certifique-se de ter o Node.js instalado em sua máquina.
+2. Clone este repositório em seu ambiente local.
+3. Navegue até o diretório raiz do projeto.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Agora, você precisará configurar as dependências do projeto. Certifique-se de ter o gerenciador de pacotes npm instalado e execute o seguinte comando:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Comandos Disponíveis
 
-To learn more about Next.js, take a look at the following resources:
+Aqui estão os comandos disponíveis para uso neste projeto:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev`: Inicia o servidor de desenvolvimento em modo de desenvolvimento.
+- `npm run build`: Compila o projeto para produção.
+- `npm start`: Inicia o servidor em modo de produção.
+- `npm run lint`: Executa a verificação de linting usando as regras de lint configuradas.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Certifique-se de executar os comandos acima conforme necessário, dependendo do ambiente em que você está trabalhando.
 
-## Deploy on Vercel
+## Tecnologias Utilizadas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Este projeto utiliza as seguintes tecnologias e bibliotecas:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js](https://nextjs.org/): Um framework React para criar aplicativos da web eficientes.
+- [React](https://reactjs.org/): Uma biblioteca JavaScript para construir interfaces de usuário.
+- [Google Calendar API](https://developers.google.com/calendar): API do Google para gerenciar eventos e calendários.
+- [Ignite UI for React](https://www.infragistics.com/products/ignite-ui-react): Um conjunto completo de componentes de IU para React.
+
+## Funcionalidades Principais
+
+O projeto "Agendamentos Descomplicados com o Google Calendar" oferece as seguintes funcionalidades principais:
+
+1. Visualização intuitiva de eventos no calendário.
+2. Criação de eventos com facilidade, fornecendo informações relevantes, como título, data e hora.
+3. Edição e exclusão de eventos existentes.
+4. Notificações automáticas de compromissos próximos.
+5. Integração com o Google Calendar para sincronização bidirecional de eventos.
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) e enviar pull requests para melhorar este projeto. Certifique-se de seguir as diretrizes de contribuição especificadas neste repositório.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE). Sinta-se à vontade para usá-lo conforme necessário.
+
+---
+
+Esperamos que este projeto de Agendamentos Descomplicados com o Google Calendar seja útil e facilite o gerenciamento de compromissos. Aproveite e tenha uma ótima experiência de agendamento!
