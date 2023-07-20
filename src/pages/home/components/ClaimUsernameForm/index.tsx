@@ -4,6 +4,7 @@ import { Airplane } from "phosphor-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useRouter } from "next/router";
 
 const ClaimUsernameFormSchema = z.object({
   username: z
@@ -19,13 +20,16 @@ export function ClaimUsernameForm() {
   const { 
     register, 
     handleSubmit, 
-    formState: { errors } ,
+    formState: { errors, isSubmitting } ,
   } = useForm<ClaimUsernameFormData>({
     resolver: zodResolver(ClaimUsernameFormSchema),
   })
-
+  
+  const router = useRouter();
+  let i = 0;
   async function HandleClaimUsername(data: ClaimUsernameFormData) {
-    console.log(data.username);
+    const { username } = data;
+      router.push(`/register?username=${username}`);
   }
 
   return (
@@ -36,7 +40,7 @@ export function ClaimUsernameForm() {
           placeholder="seu-usuario"
           {...register('username')}
         />
-        <Button size="sm" type="submit"> 
+        <Button size="sm" type="submit" disabled={isSubmitting}> 
           Reservar Usuario 
           <Airplane size={32} />
         </Button>     
