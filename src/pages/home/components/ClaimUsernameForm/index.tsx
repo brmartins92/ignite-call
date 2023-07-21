@@ -29,7 +29,7 @@ export function ClaimUsernameForm() {
   let i = 0;
   async function HandleClaimUsername(data: ClaimUsernameFormData) {
     const { username } = data;
-      router.push(`/register?username=${username}`);
+      await router.push(`/register?username=${username}`);
   }
 
   return (

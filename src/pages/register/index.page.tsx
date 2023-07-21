@@ -4,6 +4,9 @@ import { ArrowRight } from "phosphor-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { api } from "@/src/lib/axios";
 
 const registerFormSchema = z.object({
   username: z
@@ -20,13 +23,32 @@ export default function Register() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm<RegisterFormData>({
     resolver: zodResolver(registerFormSchema),
+    
   });
+  
+  const router = useRouter()
+  
+  useEffect(() => {
+    if (router.query.username) {
+      const name = String(router.query.username);
+      setValue('username', name )
+    }
+  }, [router.query?.username, setValue])
 
   async function HandleRegister(data: RegisterFormData) {
-    console.log(data);
+  
+    try {
+      await api.post('/users',{
+        name: data.name,
+        username: data.username,
+      })
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
